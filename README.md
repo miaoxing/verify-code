@@ -6,7 +6,7 @@
 ### 前台使用方法
 
 1. 显示"发送验证码"的按钮.js-verify-code-send
-2. 加载js模块plugins/verifyCode/assets/verifyCode
+2. 加载js模块plugins/verify-code/js/verify-code
 3. 调用jQuery方法 $('.js-verify-code-send').verifyCode();
 4. (可选)配置url为校验数据并发送验证码的接口
 
@@ -36,7 +36,7 @@
 
 <?= $block('js') ?>
 <script>
-  require(['plugins/verifyCode/assets/verifyCode'], function () {
+  require(['plugins/verify-code/js/verify-code'], function () {
     $('.js-verify-code-send').verifyCode({
       url: $.url('users/send-register-verify-code')
     });
