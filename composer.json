@@ -1,0 +1,15 @@
+{
+  "name": "miaoxing/verify-code",
+  "keywords": [
+    "miaoxing", "verify-code"
+  ],
+  "license": "MIT",
+  "require": {
+    "miaoxing/sms": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Miaoxing\\VerifyCode\\": "src"
+    }
+  }
+}
