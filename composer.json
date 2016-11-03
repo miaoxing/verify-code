@@ -5,11 +5,16 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/sms": "dev-master"
+    "miaoxing/plugin": "dev-master@dev"
   },
   "autoload": {
     "psr-4": {
       "Miaoxing\\VerifyCode\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\VerifyCode\\": "tests"
     }
   }
 }
