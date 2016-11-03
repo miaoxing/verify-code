@@ -16,5 +16,7 @@
     "psr-4": {
       "MiaoxingTest\\VerifyCode\\": "tests"
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
