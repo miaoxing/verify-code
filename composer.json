@@ -5,7 +5,8 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/plugin": "dev-master@dev"
+    "miaoxing/sms": "dev-master@dev",
+    "miaoxing/app": "dev-master@dev"
   },
   "autoload": {
     "psr-4": {
