@@ -2,7 +2,7 @@
 
 namespace MiaoxingTest\VerifyCode\Service;
 
-use miaoxing\plugin\tests\BaseTestCase;
+use MiaoxingTest\Plugin\BaseTestCase;
 
 class VerifyCodeTest extends BaseTestCase
 {

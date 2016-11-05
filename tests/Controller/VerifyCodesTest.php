@@ -2,7 +2,7 @@
 
 namespace MiaoxingTest\VerifyCode\Controller;
 
-use miaoxing\plugin\tests\BaseControllerTestCase;
+use MiaoxingTest\Plugin\BaseControllerTestCase;
 
 class VerifyCodesTest extends BaseControllerTestCase
 {
