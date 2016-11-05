@@ -6,5 +6,4 @@ use MiaoxingTest\Plugin\BaseControllerTestCase;
 
 class VerifyCodesTest extends BaseControllerTestCase
 {
-
 }
