@@ -1,4 +1,5 @@
 define(function() {
+  var oneSecond = 1000;
   var timeoutId;
 
   var VerifyCode = function(element, options) {
@@ -16,22 +17,22 @@ define(function() {
   };
 
   VerifyCode.prototype.init = function () {
-    var self = this;
+    var that = this;
     var $el = this.$element;
 
     this.options.btnContent = $el.html();
 
     $el.click(function () {
-      self.disable('发送中...');
-      self.send();
+      that.disable('发送中...');
+      that.send();
     });
   };
 
   VerifyCode.prototype.send = function () {
-    var self = this;
+    var that = this;
 
     $.ajax({
-      url: self.options.url,
+      url: that.options.url,
       type: 'post',
       dataType: 'json',
       data: {
@@ -40,12 +41,12 @@ define(function() {
       success: function (ret) {
         $.msg(ret);
         if (ret.code > 0) {
-          self.countdown();
+          that.countdown();
         } else {
-          self.enable();
+          that.enable();
         }
       }
-    })
+    });
   };
 
   VerifyCode.prototype.enable = function (content) {
@@ -57,21 +58,21 @@ define(function() {
   };
 
   VerifyCode.prototype.countdown = function () {
-    var self = this;
+    var that = this;
     var opt = this.options;
     var wait = opt.seconds;
     time();
 
     function time() {
-      if (wait == 0) {
-        self.enable('重新发送');
+      if (wait === 0) {
+        that.enable('重新发送');
         wait = opt.seconds;
       } else {
-        self.disable('重新发送(' + wait + ')');
+        that.disable('重新发送(' + wait + ')');
         wait--;
         timeoutId = setTimeout(function () {
-          time()
-        }, 1000);
+          time();
+        }, oneSecond);
       }
     }
   };
@@ -90,11 +91,16 @@ define(function() {
     return this.each(function () {
       var $this   = $(this);
       var data    = $this.data('verify-code');
-      var options = $.extend({}, VerifyCode.DEFAULTS, typeof option == 'object' && option);
+      var options = $.extend({}, VerifyCode.DEFAULTS, typeof option === 'object' && option);
 
-      if (!data) $this.data('verify-code', (data = new VerifyCode(this, options)));
-      if (typeof option == 'string') data[option]();
-      else if (options.show) data.show();
+      if (!data) {
+        $this.data('verify-code', (data = new VerifyCode(this, options)));
+      }
+      if (typeof option === 'string') {
+        data[option]();
+      } else if (options.show) {
+        data.show();
+      }
     });
   }
 

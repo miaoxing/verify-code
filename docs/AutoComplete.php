@@ -1,6 +1,7 @@
 <?php
 
 namespace plugins\verifyCode\docs {
+
     /**
      * @property    \Miaoxing\VerifyCode\Service\VerifyCode $verifyCode 验证码服务
      */
@@ -10,6 +11,7 @@ namespace plugins\verifyCode\docs {
 }
 
 namespace {
+
     /**
      * @return \plugins\verifyCode\docs\AutoComplete
      */
