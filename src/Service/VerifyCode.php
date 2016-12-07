@@ -71,7 +71,7 @@ class VerifyCode extends BaseService
             'mobile' => $mobile,
             'content' => sprintf($this->smsContent, $code),
             'tplIds' => $this->tplIds,
-            'data' => [$code, 1], // 1分钟
+            'data' => [$code, floor(1.0 * $this->intervalTime / 60)], // 1分钟
         ]);
         if ($ret['code'] !== 1) {
             return $this->sendRet($ret['code'], $ret['message'], $param);
@@ -133,6 +133,7 @@ class VerifyCode extends BaseService
     {
         $ret = ['code' => $code, 'message' => $message];
         wei()->user->log('校验验证码', ['param' => $param, 'ret' => $ret]);
+
         return $ret;
     }
 
@@ -144,6 +145,7 @@ class VerifyCode extends BaseService
     public function forget()
     {
         unset($this->session['verifyCode']);
+
         return $this;
     }
 
@@ -158,6 +160,7 @@ class VerifyCode extends BaseService
         if (isset($verifyCode['canSendTime']) && $verifyCode['canSendTime'] > time()) {
             return ['code' => -1, 'message' => sprintf('请过%s秒后再试', $verifyCode['canSendTime'] - time())];
         }
+
         return ['code' => 1, 'message' => '可以发送'];
     }
 }
