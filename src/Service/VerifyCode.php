@@ -81,8 +81,9 @@ class VerifyCode extends BaseService
         $this->session['verifyCode'] = [
             'code' => $code,
             'mobile' => $mobile,
-            'canSendTime' => time() + $this->intervalTime
+            'canSendTime' => time() + $this->intervalTime,
         ];
+
         return $this->sendRet($ret['code'], $ret['message'], $param);
     }
 
@@ -104,6 +105,7 @@ class VerifyCode extends BaseService
         $verifyCode = $this->session['verifyCode'];
         if ($verifyCode['mobile'] != $mobile || $verifyCode['code'] != $code) {
             unset($this->session['verifyCode']);
+
             return $this->checkRet(-2, '验证码不正确,请重新获取', $param);
         }
 
@@ -120,6 +122,7 @@ class VerifyCode extends BaseService
     {
         $ret = ['code' => $code, 'message' => $message];
         wei()->user->log('发送验证码', ['param' => $param, 'ret' => $ret]);
+
         return $ret;
     }
 
