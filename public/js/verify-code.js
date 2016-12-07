@@ -5,6 +5,7 @@ define(function() {
   var VerifyCode = function(element, options) {
     this.options = options;
     this.$element = $(element);
+    this.enabled = true;
 
     this.init();
   };
@@ -23,8 +24,10 @@ define(function() {
     this.options.btnContent = $el.html();
 
     $el.click(function () {
-      that.disable('发送中...');
-      that.send();
+      if(that.enabled) {
+        that.disable('发送中...');
+        that.send();
+      }
     });
   };
 
@@ -50,10 +53,12 @@ define(function() {
   };
 
   VerifyCode.prototype.enable = function (content) {
+    this.enabled = true;
     this.$element.removeClass('disabled').html(content || this.options.btnContent);
   };
 
   VerifyCode.prototype.disable = function (content) {
+    this.enabled = false;
     this.$element.addClass('disabled').html(content);
   };
 
