@@ -1,8 +1,8 @@
-define(function() {
+define(function () {
   var oneSecond = 1000;
   var timeoutId;
 
-  var VerifyCode = function(element, options) {
+  var VerifyCode = function (element, options) {
     this.options = options;
     this.$element = $(element);
     this.enabled = true;
@@ -24,7 +24,7 @@ define(function() {
     this.options.btnContent = $el.html();
 
     $el.click(function () {
-      if(that.enabled) {
+      if (that.enabled) {
         that.disable('发送中...');
         that.send();
       }
@@ -94,8 +94,8 @@ define(function() {
 
   function Plugin(option) {
     return this.each(function () {
-      var $this   = $(this);
-      var data    = $this.data('verify-code');
+      var $this = $(this);
+      var data = $this.data('verify-code');
       var options = $.extend({}, VerifyCode.DEFAULTS, typeof option === 'object' && option);
 
       if (!data) {
