@@ -33,6 +33,13 @@ class VerifyCode extends BaseService
     protected $intervalTime = 60;
 
     /**
+     * 验证码长度
+     *
+     * @var int
+     */
+    protected $length = 6;
+
+    /**
      * {@inheritdoc}
      */
     protected $providers = [
@@ -66,7 +73,7 @@ class VerifyCode extends BaseService
         }
 
         // 2. 生成验证码并发送短信
-        $code = mt_rand(100000, 999999);
+        $code = mt_rand(pow(10, $this->length - 1), pow(10, $this->length) - 1);
         $ret = wei()->sms->send([
             'mobile' => $mobile,
             'content' => sprintf($this->smsContent, $code),
