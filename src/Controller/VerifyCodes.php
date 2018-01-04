@@ -2,7 +2,7 @@
 
 namespace Miaoxing\VerifyCode\Controller;
 
-use miaoxing\plugin\BaseController;
+use Miaoxing\Plugin\BaseController;
 
 class VerifyCodes extends BaseController
 {
