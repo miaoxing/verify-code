@@ -2,7 +2,7 @@
 
 namespace Miaoxing\VerifyCode\Service;
 
-use miaoxing\plugin\BaseService;
+use Miaoxing\Plugin\BaseService;
 
 /**
  * @property \Wei\Session $session
