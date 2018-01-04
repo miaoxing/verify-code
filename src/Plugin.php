@@ -2,7 +2,7 @@
 
 namespace Miaoxing\VerifyCode;
 
-use miaoxing\plugin\BasePlugin;
+use Miaoxing\Plugin\BasePlugin;
 
 /**
  * @link https://github.com/toplan/laravel-sms
