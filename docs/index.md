@@ -32,7 +32,7 @@
   </div>
 </form>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['plugins/verify-code/js/verify-code'], function () {
     $('.js-verify-code-send').verifyCode({
