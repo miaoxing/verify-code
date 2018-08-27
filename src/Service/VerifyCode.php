@@ -105,6 +105,10 @@ class VerifyCode extends BaseService
     {
         $param = get_defined_vars();
 
+        if (!$code) {
+            return $this->checkRet(-3, '验证码不能为空', $param);
+        }
+
         if (!isset($this->session['verifyCode'])) {
             return $this->checkRet(-1, '请先发送验证码', $param);
         }
