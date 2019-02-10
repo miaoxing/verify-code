@@ -28,7 +28,7 @@
     </div>
   </div>
   <div class="form-footer">
-    <button type="button" class="btn btn-primary btn-block hairline">提交</button>
+    <button type="button" class="btn btn-primary btn-block">提交</button>
   </div>
 </form>
 
