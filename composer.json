@@ -2,7 +2,8 @@
   "name": "miaoxing/verify-code",
   "type": "miaoxing-plugin",
   "keywords": [
-    "miaoxing", "verify-code"
+    "miaoxing",
+    "verify-code"
   ],
   "license": "MIT",
   "require": {
