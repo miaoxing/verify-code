@@ -1,12 +1,13 @@
 {
   "name": "miaoxing/verify-code",
+  "type": "miaoxing-plugin",
   "keywords": [
     "miaoxing", "verify-code"
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/sms": "dev-master@dev",
-    "miaoxing/app": "dev-master@dev"
+    "miaoxing/sms": "^0.1.0",
+    "miaoxing/app": "^0.2.0"
   },
   "require-dev": {
     "miaoxing/coding-standards": "^2.0.0"
@@ -22,5 +23,15 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra": {
+    "installer-types": [
+      "miaoxing-plugin"
+    ],
+    "installer-paths": {
+      "plugins/{$name}/": [
+        "type:miaoxing-plugin"
+      ]
+    }
+  }
 }
