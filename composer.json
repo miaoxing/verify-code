@@ -1,6 +1,7 @@
 {
   "name": "miaoxing/verify-code",
   "type": "miaoxing-plugin",
+  "description": "Miaoxing Verify Code Plugin",
   "keywords": [
     "miaoxing",
     "verify-code"
