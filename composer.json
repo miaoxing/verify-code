@@ -12,7 +12,8 @@
     "miaoxing/app": "^0.3.0"
   },
   "require-dev": {
-    "miaoxing/coding-standards": "^2.0.0"
+    "miaoxing/coding-standards": "^2.0.0",
+    "miaoxing/dev": "^6.4.0"
   },
   "autoload": {
     "psr-4": {
@@ -34,6 +35,9 @@
       "plugins/{$name}/": [
         "type:miaoxing-plugin"
       ]
+    },
+    "require-ci": {
+      "miaoxing/dev": "miaoxing/dev as 6.x-dev"
     }
   }
 }
