@@ -8,12 +8,12 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/sms": "^0.1.14",
-    "miaoxing/app": "^0.3.0"
+    "miaoxing/sms": "^0.1.15",
+    "miaoxing/app": "^0.3.1"
   },
   "require-dev": {
     "miaoxing/coding-standards": "^2.0.0",
-    "miaoxing/dev": "^6.4.0"
+    "miaoxing/dev": "^7.0.0"
   },
   "autoload": {
     "psr-4": {
