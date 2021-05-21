@@ -8,8 +8,8 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/sms": "^0.1.16",
-    "miaoxing/app": "^0.3.2"
+    "miaoxing/sms": "^0.1.17",
+    "miaoxing/app": "^0.3.3"
   },
   "require-dev": {
     "miaoxing/coding-standards": "^2.0.0",
