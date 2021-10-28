@@ -1,3 +1,15 @@
+## [0.1.18](https://github.com/miaoxing/verify-code/compare/v0.1.17...v0.1.18) (2021-10-28)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/sms:** upgrade from `0.1.17` to `0.1.18`
+* **@miaoxing/app:** upgrade from `0.3.3` to `0.4.0`
+* **@miaoxing/dev:** upgrade from `7.0.1` to `8.0.0`
+
 ## [0.1.17](https://github.com/miaoxing/verify-code/compare/v0.1.16...v0.1.17) (2021-05-21)
 
 
