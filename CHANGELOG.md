@@ -1,3 +1,19 @@
+## [0.1.27](https://github.com/miaoxing/verify-code/compare/v0.1.26...v0.1.27) (2022-07-02)
+
+
+### Bug Fixes
+
+* 解决 composer 2.2+ 默认不启用插件导致安装路径错误 ([5bc84df](https://github.com/miaoxing/verify-code/commit/5bc84df9df228815983d81c06f7ea3bd751216a9))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/sms:** upgrade from `0.1.26` to `0.1.27`
+* **@miaoxing/app:** upgrade from `0.6.5` to `0.6.6`
+
 ## [0.1.26](https://github.com/miaoxing/verify-code/compare/v0.1.25...v0.1.26) (2022-07-01)
 
 
