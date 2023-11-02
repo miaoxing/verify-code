@@ -1,3 +1,14 @@
+## [0.1.43](https://github.com/miaoxing/verify-code/compare/v0.1.42...v0.1.43) (2023-11-02)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/sms:** upgrade from `0.1.42` to `0.1.43`
+* **@miaoxing/app:** upgrade from `0.7.7` to `0.7.8`
+
 ## [0.1.42](https://github.com/miaoxing/verify-code/compare/v0.1.41...v0.1.42) (2023-09-30)
 
 
