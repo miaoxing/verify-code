@@ -6,7 +6,7 @@ use Miaoxing\Plugin\Test\BaseTestCase;
 
 class VerifyCodeTest extends BaseTestCase
 {
-    public function setUp()
+    protected function setUp()
     {
         parent::setUp();
 

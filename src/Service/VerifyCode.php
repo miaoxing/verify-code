@@ -68,19 +68,19 @@ class VerifyCode extends BaseService
 
         // 1. 检查是否可以发送验证码
         $ret = $this->canSend();
-        if ($ret['code'] !== 1) {
+        if (1 !== $ret['code']) {
             return $this->sendRet($ret['code'], $ret['message'], $param);
         }
 
         // 2. 生成验证码并发送短信
-        $code = mt_rand(pow(10, $this->length - 1), pow(10, $this->length) - 1);
+        $code = mt_rand(10 ** ($this->length - 1), 10 ** $this->length - 1);
         $ret = wei()->sms->send([
             'mobile' => $mobile,
             'content' => sprintf($this->smsContent, $code),
             'tplIds' => $this->tplIds,
             'data' => [$code, floor(1.0 * $this->intervalTime / 60)], // 1分钟
         ]);
-        if ($ret['code'] !== 1) {
+        if (1 !== $ret['code']) {
             return $this->sendRet($ret['code'], $ret['message'], $param);
         }
 
