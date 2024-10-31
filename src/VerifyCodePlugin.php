@@ -7,7 +7,7 @@ use Miaoxing\Plugin\BasePlugin;
 /**
  * @link https://github.com/toplan/laravel-sms
  */
-class Plugin extends BasePlugin
+class VerifyCodePlugin extends BasePlugin
 {
     protected $name = '验证码';
 
