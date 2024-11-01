@@ -1,3 +1,19 @@
+## [0.1.59](https://github.com/miaoxing/verify-code/compare/v0.1.58...v0.1.59) (2024-11-01)
+
+
+### Bug Fixes
+
+* **verify-code:** 更正插件名称 ([f2e0890](https://github.com/miaoxing/verify-code/commit/f2e089090a5d1d1a816cb49edaaf5c6f56600987))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/sms:** upgrade from `0.1.58` to `0.1.59`
+* **@miaoxing/app:** upgrade from `0.10.5` to `0.10.6`
+
 ## [0.1.58](https://github.com/miaoxing/verify-code/compare/v0.1.57...v0.1.58) (2024-09-30)
 
 
